@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3072e9ad-6775-4fbf-b4b3-2e842304fe90" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/Admin/ManageUser.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/ArticlePage.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/CategorizedArticlePage.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/HomePage.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Layout/master.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/User/InsertArticle.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/User/ManageArticle.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/User/ManageProfile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/database/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +130,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1oKDTXPXKFT2A7nv5382R3xl4st" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -151,7 +159,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613026400759</updated>
-      <workItem from="1613026410468" duration="10438000" />
+      <workItem from="1613026410468" duration="11389000" />
     </task>
     <servers />
   </component>
