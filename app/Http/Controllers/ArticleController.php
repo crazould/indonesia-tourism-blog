@@ -18,10 +18,6 @@ class ArticleController extends Controller
         $articles = Article::all();
         $categories = Category::all();
 
-//        foreach ($articles as $article){
-//            $article->description = substr($article->description, 100);
-//        }
-
         $data = [ 'articles' => $articles, 'categories' => $categories];
         return view('HomePage', compact('data' ));
     }

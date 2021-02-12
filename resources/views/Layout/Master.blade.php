@@ -60,8 +60,14 @@
         .btn-color-dark:hover{
             background-color: #4a4a4a;
         }
-        .btn-color-light:hover{
-            background-color: #cbcbcb;
+        .btn-color-light:hover {
+             background-color: #cbcbcb;
+        }
+        .link-color-light:hover{
+            color: #cbcbcb  !important;
+        }
+        .link-color-light {
+            color: #F5F5F5  !important;
         }
 
         .logo-group{
@@ -143,30 +149,32 @@
         <button class="navbar-toggler my-2 my-lg-0" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse my-1" id="navbarNav">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Category
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link link-color-light" href="/">Home</a>
+                </li>
+
+                @isset($data)
+                    <li class="nav-item dropdown">
+                        <a class="nav-link link-color-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Category
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            @foreach($data['categories'] as $category)
+                                <a class="dropdown-item" href="#">{{$category->name}}</a>
+                            @endforeach
+                        </div>
+                    </li>
+                @endisset
+                <li class="nav-item">
+                    <a class="nav-link link-color-light" href="#">About Us</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-color-light btn-sm ml-2" type="submit">Sign Up</button>
-                <button class="btn btn-color-light btn-sm ml-2" type="submit">Login</button>
-                <button class="btn btn-color-light btn-sm ml-2" type="submit">Logout</button>
+            <form class="form-inline my-2 my-lg-0" action="">
+                <a class="btn btn-color-light btn-md ml-2" href="/register">Sign Up</a>
+                <a class="btn btn-color-light btn-md ml-2" href="/login">Login</a>
+                <button class="btn btn-color-light btn-md ml-2" type="submit">Logout</button>
             </form>
         </div>
     </nav>
