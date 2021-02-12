@@ -2,22 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3072e9ad-6775-4fbf-b4b3-2e842304fe90" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/Admin/ManageUser.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/ArticlePage.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/CategorizedArticlePage.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/HomePage.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Layout/master.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/User/InsertArticle.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/User/ManageArticle.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/User/ManageProfile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Admin/ManageUser.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/ManageUser.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ArticlePage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ArticlePage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/CategorizedArticlePage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/CategorizedArticlePage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/HomePage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/HomePage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Layout/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Layout/Master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/LoginPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/LoginPage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/User/InsertArticle.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/User/InsertArticle.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/User/ManageArticle.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/User/ManageArticle.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/User/ManageProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/User/ManageProfile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
@@ -159,7 +163,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613026400759</updated>
-      <workItem from="1613026410468" duration="11389000" />
+      <workItem from="1613026410468" duration="11777000" />
+      <workItem from="1613102043050" duration="7550000" />
     </task>
     <servers />
   </component>
