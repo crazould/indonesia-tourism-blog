@@ -89,6 +89,24 @@
             background-size: 100% 100%;
         }
 
+        .media-slide{
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-content{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            right: 0;
+            width: 48%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 5;
+        }
+
         .media-logo:hover{
             -webkit-filter: grayscale(0);
         }
@@ -102,6 +120,10 @@
             padding-left: 3%;
             padding-right: 3%;
             flex-direction: column;
+            font-size: 1vw;
+        }
+        footer > h2{
+            font-size: 2vw;
         }
 
         .copyright{
@@ -116,7 +138,6 @@
     <title>@yield('title')</title>
 </head>
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-color-primary">
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler my-2 my-lg-0" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -150,7 +171,7 @@
         </div>
     </nav>
 
-    <div class="container-fluid wrapper">
+    <div class="">
         @yield('content')
     </div>
 
@@ -176,5 +197,10 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script !src="">
+        $('.carousel').carousel({
+            interval: 2000
+        })
+    </script>
 </body>
 </html>
