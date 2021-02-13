@@ -35,7 +35,7 @@
 
     </div>
 
-    <div style="" class="container my-5">
+    <div style="min-height: 48vw" class="container my-5">
             @foreach($data['articles'] as $key  => $article)
                 @if(($key) % 3 == 0)
                     <div style="display: flex; justify-content: center" class="mb-5 row">
