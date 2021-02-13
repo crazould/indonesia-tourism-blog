@@ -6,13 +6,17 @@
 
     <div id="carouselExampleSlidesOnly" class="carousel slide" style="" data-ride="carousel">
         <div style="" class="carousel-content text-color-light">
+
             <div class="display-4" style="text-align: center">
-                WONDERFUL INDONESIA TOURISM
+                @if(\Illuminate\Support\Facades\Auth::check())
+                    Welcome {{\Illuminate\Support\Facades\Auth::user()->name}}!
+                @else
+                    WONDERFUL INDONESIA TOURISM
+                @endif
             </div>
             <p class="lead" style="font-style: oblique">
                 Number One Indonesia Tourism Blog in the world!
             </p>
-
             <form action="">
                 <button class="btn btn-color-secondary btn-lg text-color-light">
                     Join Now!

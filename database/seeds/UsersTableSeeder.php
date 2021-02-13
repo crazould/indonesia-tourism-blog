@@ -17,35 +17,35 @@ class UsersTableSeeder extends Seeder
                 'email' => 'dummy.one@gmail.com',
                 'phone' => '081212341234',
                 'role' => 'user',
-                'password' => 'dummyOne'
+                'password' => bcrypt('dummyOne')
             ],
             [
                 'name' => 'dummy two',
                 'email' => 'dummy.two@gmail.com',
                 'phone' => '081212341234',
                 'role' => 'user',
-                'password' => 'dummyTwo'
+                'password' => bcrypt('dummyTwo')
             ],
             [
                 'name' => 'dummy three',
                 'email' => 'dummy.three@gmail.com',
                 'phone' => '081212341234',
                 'role' => 'user',
-                'password' => 'dummyThree'
+                'password' => bcrypt('dummyThree')
             ],
             [
                 'name' => 'admin one',
                 'email' => 'admin.one@gmail.com',
                 'phone' => '081212341234',
                 'role' => 'admin',
-                'password' => 'dummyOne'
+                'password' => bcrypt('adminOne')
             ],
             [
                 'name' => 'admin two',
                 'email' => 'admin.two@gmail.com',
                 'phone' => '081212341234',
                 'role' => 'admin',
-                'password' => 'adminTwo'
+                'password' => bcrypt('adminTwo')
             ],
         ]);
     }

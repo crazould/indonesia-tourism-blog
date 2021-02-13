@@ -19,3 +19,6 @@ Route::get('/register','AuthController@showRegisterPage');
 Route::get('/article/{id}','ArticleController@show');
 Route::get('/category/{id}','CategoryController@show');
 
+Route::post('/login', 'AuthController@login');
+Route::post('/register', 'AuthController@register');
+Route::get('/logout', 'AuthController@logout');

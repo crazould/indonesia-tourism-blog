@@ -7,7 +7,8 @@
 
     <div style="" class="container my-5">
 
-        <h1 class="display-4 mb-5" style="font-weight: bolder"> {{$data['articles'][0]->category->name . ' Category' }}</h1>
+        <h1 class="display-3" style="font-weight: bolder"> {{$data['articles'][0]->category->name . ' Category' }}</h1>
+        <hr class="mb-5">
 
         @foreach($data['articles'] as $key  => $article)
             @if(($key) % 3 == 0)

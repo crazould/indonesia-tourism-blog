@@ -179,10 +179,13 @@
                     <a class="nav-link link-color-light" href="#">About Us</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0" action="">
-                <a class="btn btn-color-secondary btn-md ml-2 text-color-light" href="/register">Sign Up</a>
-                <a class="btn btn-color-secondary btn-md ml-2 text-color-light" href="/login">Login</a>
-                <button class="btn btn-color-secondary btn-md ml-2 text-color-light" type="submit">Logout</button>
+            <form class="form-inline my-2 my-lg-0" action="{{url('/logout')}}">
+                @if(!\Illuminate\Support\Facades\Auth::check())
+                    <a class="btn btn-color-secondary btn-md ml-2 text-color-light" href="/register">Sign Up</a>
+                    <a class="btn btn-color-secondary btn-md ml-2 text-color-light" href="/login">Login</a>
+                @else
+                    <button class="btn btn-color-secondary btn-md ml-2 text-color-light" type="submit">Logout</button>
+                @endif
             </form>
         </div>
     </nav>

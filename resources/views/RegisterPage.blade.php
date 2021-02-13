@@ -11,14 +11,18 @@
                 <h2 class="card-title my-5" style="text-align: center"> <b>Sign Up</b> </h2>
                 <form>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email</label>
+                        <label for="email">Email</label>
                         <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter your email here">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
+                        <label for="password">Password</label>
                         <input type="password" class="form-control" placeholder="Enter your password here">
                     </div>
-                    <button type="submit" class="btn btn-color-secondary btn-md mt-2 text-color-light w-100">Sign Up</button>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="text" class="form-control" placeholder="Enter your phone number here">
+                    </div>
+                    <button type="submit" class="btn btn-color-secondary btn-md mt-3 text-color-light w-100">Sign Up</button>
                 </form>
             </div>
         </div>
