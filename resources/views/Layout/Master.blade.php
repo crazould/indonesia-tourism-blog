@@ -43,7 +43,10 @@
             background-color: #26C6DA;
         }
         .btn-color-secondary{
-            background-color: #FF9800;
+            background-color: #FF9800 !important;
+        }
+        .link-color-secondary{
+            color: #FF9800 !important;
         }
         .btn-color-dark{
             background-color: #121212;
@@ -55,14 +58,19 @@
             background-color: #80DEEA;
         }
         .btn-color-secondary:hover{
-            background-color: #FFCC80;
+            background-color: #FFCC80 !important;
         }
+        .link-color-secondary:hover{
+            color: #FFCC80 !important;
+        }
+
         .btn-color-dark:hover{
             background-color: #4a4a4a;
         }
         .btn-color-light:hover {
              background-color: #cbcbcb;
         }
+
         .link-color-light:hover{
             color: #cbcbcb  !important;
         }
@@ -144,7 +152,8 @@
     <title>@yield('title')</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-color-primary">
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-color-primary">
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler my-2 my-lg-0" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -154,7 +163,6 @@
                 <li class="nav-item">
                     <a class="nav-link link-color-light" href="/">Home</a>
                 </li>
-
                 @isset($data)
                     <li class="nav-item dropdown">
                         <a class="nav-link link-color-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -172,9 +180,9 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" action="">
-                <a class="btn btn-color-light btn-md ml-2" href="/register">Sign Up</a>
-                <a class="btn btn-color-light btn-md ml-2" href="/login">Login</a>
-                <button class="btn btn-color-light btn-md ml-2" type="submit">Logout</button>
+                <a class="btn btn-color-secondary btn-md ml-2 text-color-light" href="/register">Sign Up</a>
+                <a class="btn btn-color-secondary btn-md ml-2 text-color-light" href="/login">Login</a>
+                <button class="btn btn-color-secondary btn-md ml-2 text-color-light" type="submit">Logout</button>
             </form>
         </div>
     </nav>
@@ -206,11 +214,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script !src="">
-
         $('.carousel').carousel({
             interval: 2500
         })
-
     </script>
 </body>
 </html>

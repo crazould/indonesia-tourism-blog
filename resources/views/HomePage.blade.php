@@ -5,7 +5,6 @@
 @section('content')
 
     <div id="carouselExampleSlidesOnly" class="carousel slide" style="" data-ride="carousel">
-
         <div style="" class="carousel-content text-color-light">
             <div class="display-4" style="text-align: center">
                 WONDERFUL INDONESIA TOURISM
@@ -20,7 +19,6 @@
                 </button>
             </form>
         </div>
-
         <div class="carousel-inner">
             @foreach($data['articles'] as $key  => $article)
                 <div class="carousel-item {{$key == 0 ? 'active' : '' }}" style="height: 46vw; ">
@@ -40,9 +38,9 @@
                             <div class="card" style="width: 100%;">
                                 <img class="card-img-top" src="{{asset('storage/'.$article->image)}}" height="230px" alt="Card image cap">
                                 <div class="card-body">
-                                    <h5 class="card-title" style="font-weight: bold">{{$article->title . ' ' . $key}} </h5>
+                                    <h5 class="card-title" style="font-weight: bold">{{$article->title}} </h5>
                                     <p class="card-text" id="card-text">{{ substr($article->description, 0 ,100) . ' ...' }}</p>
-                                    <a href="#" class="btn btn-color-secondary btn-md text-color-light">Read more</a>
+                                    <a href="{{url('/article/'.$article->id)}}" class="btn btn-color-secondary btn-md text-color-light">Read more</a>
                                 </div>
                             </div>
                         </div>
