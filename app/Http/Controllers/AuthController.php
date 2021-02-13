@@ -7,6 +7,7 @@ use App\Category;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class AuthController extends Controller
 {
@@ -23,20 +24,33 @@ class AuthController extends Controller
     }
 
     public function login(Request $request){
-
-        $credentials = $request->only('email', 'password');
-
         $result = Auth::attempt([
             'email' => $request->email,
             'password' => $request->password
         ]);
 
         if ($result) {
-//            $user = User::where('email', '=', $request->email)->get();
-//            Auth::login($user);
             return redirect()->to('/');
         }
         return redirect()->to('/login');
+    }
+
+    public function register(Request $request){
+
+        $this->validate($request, [
+            'email' => "unique:users,email",
+        ]);
+
+        $user = new User();
+        $user->name = $request->name;
+        $user->password = bcrypt($request->password);
+        $user->email = $request->email;
+        $user->phone = $request->phone;
+        $user->role = 'user';
+
+        $user->save();
+
+        return view('RegisterPage')->with('success', 'Sign Up Success!');
     }
 
     public function logout(){
