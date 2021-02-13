@@ -170,7 +170,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             @foreach($data['categories'] as $category)
-                                <a class="dropdown-item" href="#">{{$category->name}}</a>
+                                <a class="dropdown-item" href="{{url('/category/'.$category->id)}}">{{$category->name}}</a>
                             @endforeach
                         </div>
                     </li>
@@ -201,10 +201,10 @@
                 <img src="{{asset('storage/assets/instagram.png')}}" alt="not found" class="media-logo">
             </a>
             <a href="https://twitter.com/Aiq__" target="_blank">
-                <img src="{{asset('storage/assets/linkedin.png')}}" alt="not found" class="media-logo">
+                <img src="{{asset('storage/assets/twitter.png')}}" alt="not found" class="media-logo">
             </a>
             <a href="https://id.linkedin.com/in/muhammad-filardi-31907a183" target="_blank">
-                <img src="{{asset('storage/assets/twitter.png')}}" alt="not found" class="media-logo">
+                <img src="{{asset('storage/assets/linkedin.png')}}" alt="not found" class="media-logo">
             </a>
         </div>
         <div class="copyright">copyright by &copy Muhammad At Thariq Filardi</div>

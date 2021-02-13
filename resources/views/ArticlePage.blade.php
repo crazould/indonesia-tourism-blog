@@ -1,11 +1,8 @@
 @extends('Layout.Master')
 
-{{--give it article name--}}
-@section('title', 'Article Page')
+@section('title', $data['article']->title)
 
 @section('content')
-
-{{--    <img src="{{asset('storage/'.$data['article']->image)}}" style="height: 30vw;" class="img-fluid w-100" alt="Responsive image">--}}
 
     <div style="background-image: url('{{asset('storage/'.$data['article']->image)}}');
         height: 36vw;

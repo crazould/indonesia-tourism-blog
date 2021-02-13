@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use App\Category;
 use Illuminate\Http\Request;
 
@@ -44,9 +45,14 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category)
+    public function show($id)
     {
-        //
+        $articles = Article::where( 'category_id', '=', $id)->get();
+        $categories = Category::all();
+        $data = ['articles' => $articles, 'categories' => $categories];
+
+        return view('CategorizedArticlePage', compact('data'));
+
     }
 
     /**

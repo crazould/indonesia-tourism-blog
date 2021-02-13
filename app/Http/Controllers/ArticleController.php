@@ -17,7 +17,6 @@ class ArticleController extends Controller
     {
         $articles = Article::all();
         $categories = Category::all();
-
         $data = [ 'articles' => $articles, 'categories' => $categories];
         return view('HomePage', compact('data' ));
     }

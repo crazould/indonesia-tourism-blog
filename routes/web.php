@@ -17,4 +17,5 @@ Route::get('/','ArticleController@index');
 Route::get('/login','AuthController@showLoginPage');
 Route::get('/register','AuthController@showRegisterPage');
 Route::get('/article/{id}','ArticleController@show');
+Route::get('/category/{id}','CategoryController@show');
 

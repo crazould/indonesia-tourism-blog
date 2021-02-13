@@ -39,8 +39,16 @@
                                 <img class="card-img-top" src="{{asset('storage/'.$article->image)}}" height="230px" alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title" style="font-weight: bold">{{$article->title}} </h5>
-                                    <p class="card-text" id="card-text">{{ substr($article->description, 0 ,100) . ' ...' }}</p>
-                                    <a href="{{url('/article/'.$article->id)}}" class="btn btn-color-secondary btn-md text-color-light">Read more</a>
+                                    <p class="card-text mb-2" id="card-text">{{ substr($article->description, 0 ,100) . ' ...' }}</p>
+                                    <i>
+                                        Category:
+                                        <a href="{{url('/category/'.$article->category->id)}}" class="link-color-secondary">
+                                            {{$article->category->name}}
+                                        </a>
+                                    </i> <br>
+                                    <a href="{{url('/article/'.$article->id)}}" class="mt-3 btn btn-color-secondary btn-md text-color-light">
+                                        Read more
+                                    </a>
                                 </div>
                             </div>
                         </div>
