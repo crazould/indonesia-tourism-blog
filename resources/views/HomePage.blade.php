@@ -17,11 +17,13 @@
             <p class="lead" style="font-style: oblique">
                 Number One Indonesia Tourism Blog in the world!
             </p>
-            <form action="">
-                <button class="btn btn-color-secondary btn-lg text-color-light">
-                    Join Now!
-                </button>
-            </form>
+            @if(!\Illuminate\Support\Facades\Auth::check())
+                <form action="{{url('/login')}}" >
+                    <button class="btn btn-color-secondary btn-lg text-color-light">
+                        Join Now!
+                    </button>
+                </form>
+            @endif
         </div>
         <div class="carousel-inner">
             @foreach($data['articles'] as $key  => $article)

@@ -160,24 +160,42 @@
         </button>
         <div class="collapse navbar-collapse my-1" id="navbarNav">
             <ul class="navbar-nav mr-auto">
+
                 <li class="nav-item">
                     <a class="nav-link link-color-light" href="/">Home</a>
                 </li>
-                @isset($data)
-                    <li class="nav-item dropdown">
-                        <a class="nav-link link-color-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Category
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            @foreach($data['categories'] as $category)
-                                <a class="dropdown-item" href="{{url('/category/'.$category->id)}}">{{$category->name}}</a>
-                            @endforeach
-                        </div>
+                @if(\Illuminate\Support\Facades\Auth::user()['role'] == 'admin')
+                    <li class="nav-item">
+                        <a class="nav-link link-color-light" href="/user/admin">Admin</a>
                     </li>
-                @endisset
-                <li class="nav-item">
-                    <a class="nav-link link-color-light" href="#">About Us</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-color-light" href="/user/">User</a>
+                    </li>
+                @elseif(\Illuminate\Support\Facades\Auth::user()['role'] == 'user')
+                    <li class="nav-item">
+                        <a class="nav-link link-color-light" href="/user/admin">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-color-light" href="/user/">Blog</a>
+                    </li>
+                @else
+                    @isset($data)
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link-color-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Category
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                @foreach($data['categories'] as $category)
+                                    <a class="dropdown-item" href="{{url('/category/'.$category->id)}}">{{$category->name}}</a>
+                                @endforeach
+                            </div>
+                        </li>
+                    @endisset
+                    <li class="nav-item">
+                        <a class="nav-link link-color-light" href="#">About Us</a>
+                    </li>
+                @endif
+
             </ul>
             <form class="form-inline my-2 my-lg-0" action="{{url('/logout')}}">
                 @if(!\Illuminate\Support\Facades\Auth::check())
