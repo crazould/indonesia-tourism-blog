@@ -84,6 +84,9 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $user->delete();
-        return view('Admin.ManageUser')->with('success', "Success delete user");
+
+        $users = User::where('role', '=', 'user')->get();
+
+        return view('Admin.ManageUser', compact('users'))->with('success', "Success delete user");
     }
 }

@@ -24,5 +24,6 @@ Route::post('/register', 'AuthController@register');
 Route::get('/logout', 'AuthController@logout');
 
 Route::get('/users/{role}', 'UserController@index');
-Route::post('/users/{id}', 'UserController@destroy');
+Route::delete('/users/{id}', 'UserController@destroy');
+
 

@@ -31,7 +31,8 @@
                             <td>{{$user->phone}}</td>
                             <td>
                                 <form action="{{url('users/'.$user->id)}}" method="post">
-                                    {{csrf_field()}}
+                                    @method('DELETE')
+                                    @csrf
                                     <button class="btn btn-danger" type="submit">
                                         Delete
                                     </button>
