@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use App\Category;
+use Faker\Provider\Uuid;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
@@ -48,7 +50,26 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $article = new Article();
+        $article->title = $request->title;
+        $article->category_id = $request->categories;
+
+        $article->user_id = Auth::id();
+        $image = $request->file('image');
+
+        $image_name = Uuid::uuid() . '.' . $image->getClientOriginalExtension();
+        $dest = storage_path('/app/public/images/');
+        $image->move($dest, $image_name);
+
+        $article->image = 'images/'.$image_name;
+
+        $article->description = $request->description;
+
+        $article->save();
+
+        $categories = Category::all();
+        return view('User.InsertArticle', compact('categories'))->with('success', 'Create Success!');
     }
 
     /**

@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="container my-5" style="height: 46vw">
+    <div class="container my-5" style="min-height: 48vw">
             <h1 class="display-4" style="font-weight: bolder">
                 Manage Article
             </h1>

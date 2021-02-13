@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="container my-5" style="height: 46vw">
+    <div class="container my-5" style="min-height: 48vw">
         @if($users->count() != 0)
         <h1 class="display-4" style="font-weight: bolder">
             All users with role {{$users[0]->role}}
