@@ -57,9 +57,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-
+        return view('User.ManageProfile');
     }
 
     /**
@@ -71,6 +71,16 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $user = User::find($id);
+
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->phone = $request->phone;
+        $user->role = 'user';
+
+        $user->save();
+
+        return view('User.ManageProfile')->with('success', 'Update Profile Success!');
 
     }
 

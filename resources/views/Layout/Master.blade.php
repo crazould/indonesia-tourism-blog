@@ -173,10 +173,10 @@
                     </li>
                 @elseif(\Illuminate\Support\Facades\Auth::user()['role'] == 'user')
                     <li class="nav-item">
-                        <a class="nav-link link-color-light" href="/admin">Profile</a>
+                        <a class="nav-link link-color-light" href="/profile">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link-color-light" href="/user/">Blog</a>
+                        <a class="nav-link link-color-light" href="/article">Blog</a>
                     </li>
                 @else
                     @isset($data)
