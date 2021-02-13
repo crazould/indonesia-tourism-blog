@@ -21,6 +21,14 @@ class ArticleController extends Controller
         return view('HomePage', compact('data' ));
     }
 
+    public function getAll()
+    {
+        $articles = Article::all();
+        $categories = Category::all();
+        $data = [ 'articles' => $articles, 'categories' => $categories];
+        return view('User.ManageArticle', compact('data' ));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -28,7 +36,8 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        return view('User.InsertArticle', compact('categories'));
     }
 
     /**
@@ -85,8 +94,15 @@ class ArticleController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Article $article)
+    public function destroy($id)
     {
-        //
+        $article = Article::find($id);
+        $article->delete();
+
+        $articles = Article::all();
+        $categories = Category::all();
+        $data = ['articles' => $articles, 'categories' => $categories ];
+
+        return view('User.ManageArticle', compact('data'))->with('success', "Success delete article");
     }
 }

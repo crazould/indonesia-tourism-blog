@@ -176,7 +176,7 @@
                         <a class="nav-link link-color-light" href="/profile">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link-color-light" href="/article">Blog</a>
+                        <a class="nav-link link-color-light" href="/articles">Blog</a>
                     </li>
                 @else
                     @isset($data)
