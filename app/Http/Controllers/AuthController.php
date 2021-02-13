@@ -32,7 +32,9 @@ class AuthController extends Controller
         if ($result) {
             return redirect()->to('/');
         }
-        return redirect()->to('/login');
+
+        return view('LoginPage')->with('error', 'invalid email and password combination');
+
     }
 
     public function register(Request $request){

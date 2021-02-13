@@ -166,14 +166,14 @@
                 </li>
                 @if(\Illuminate\Support\Facades\Auth::user()['role'] == 'admin')
                     <li class="nav-item">
-                        <a class="nav-link link-color-light" href="/user/admin">Admin</a>
+                        <a class="nav-link link-color-light" href="/users/admin">Admin</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link-color-light" href="/user/">User</a>
+                        <a class="nav-link link-color-light" href="/users/user">User</a>
                     </li>
                 @elseif(\Illuminate\Support\Facades\Auth::user()['role'] == 'user')
                     <li class="nav-item">
-                        <a class="nav-link link-color-light" href="/user/admin">Profile</a>
+                        <a class="nav-link link-color-light" href="/admin">Profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link link-color-light" href="/user/">Blog</a>

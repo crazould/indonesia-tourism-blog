@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -11,9 +12,11 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($role)
     {
+        $users = User::where('role', '=', $role)->get();
 
+        return view('Admin.ManageUser', compact('users'));
     }
 
     /**
@@ -79,6 +82,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-
+        $user = User::find($id);
+        $user->delete();
+        return view('Admin.ManageUser')->with('success', "Success delete user");
     }
 }

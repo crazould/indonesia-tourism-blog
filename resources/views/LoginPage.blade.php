@@ -22,10 +22,17 @@
                         <label for="password">Password</label>
                         <input type="password" name="password" class="form-control" placeholder="Enter your password here" required>
                     </div>
-                    <button type="submit" class="btn btn-color-secondary btn-md mt-4 text-color-light w-100" >
+                    <button type="submit" class="btn btn-color-secondary btn-md mt-4 mb-2 text-color-light w-100" >
                         Login
                     </button>
                 </form>
+
+                @isset($error)
+                    <div class="alert alert-danger mt-4" style="font-size: small">
+                        {{ $error }}
+                    </div>
+                @endisset
+
             </div>
         </div>
     </div>

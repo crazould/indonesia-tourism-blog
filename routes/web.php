@@ -22,3 +22,7 @@ Route::get('/category/{id}','CategoryController@show');
 Route::post('/login', 'AuthController@login');
 Route::post('/register', 'AuthController@register');
 Route::get('/logout', 'AuthController@logout');
+
+Route::get('/users/{role}', 'UserController@index');
+Route::post('/users/{id}', 'UserController@destroy');
+
