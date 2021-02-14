@@ -7,6 +7,7 @@ use App\Category;
 use Faker\Provider\Uuid;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
@@ -119,6 +120,9 @@ class ArticleController extends Controller
     {
         $article = Article::find($id);
         $userId = $article->user_id;
+        $image_name = substr($article->image, 7);
+
+        Storage::disk('public')->delete($article->image);
         $article->delete();
 
         $articles = Article::where('user_id', '=', $userId)->get();

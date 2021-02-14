@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3072e9ad-6775-4fbf-b4b3-2e842304fe90" name="Default Changelist" comment="add only selected user and admin can delete their article">
-      <change afterPath="$PROJECT_DIR$/resources/views/AboutUsPage.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ArticlePage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ArticlePage.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Layout/Master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Layout/Master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +161,7 @@
       <workItem from="1613026410468" duration="11777000" />
       <workItem from="1613102043050" duration="23995000" />
       <workItem from="1613182417555" duration="25641000" />
-      <workItem from="1613271378176" duration="3968000" />
+      <workItem from="1613271378176" duration="4779000" />
     </task>
     <task id="LOCAL-00001" summary="add carousel">
       <created>1613120470472</created>
