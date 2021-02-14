@@ -11,11 +11,15 @@
             <hr class="mb-5">
 
         @if($data['articles']->count() != 0)
-            <form action="{{url('/article')}}" method="get" class="mb-3">
-                <button class="btn btn-color-secondary text-color-light" type="submit" >
-                    + Create Blog
-                </button>
-            </form>
+
+            @if(\Illuminate\Support\Facades\Auth::id() == $data['articles'][0]->user_id)
+
+                <form action="{{url('/article')}}" method="get" class="mb-3">
+                    <button class="btn btn-color-secondary text-color-light" type="submit" >
+                        + Create Blog
+                    </button>
+                </form>
+            @endif
             <table class="table table-striped">
                 <thead>
                 <tr>

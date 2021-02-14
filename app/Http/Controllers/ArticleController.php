@@ -23,9 +23,9 @@ class ArticleController extends Controller
         return view('HomePage', compact('data' ));
     }
 
-    public function getAll()
+    public function getUserArticle($id)
     {
-        $articles = Article::all();
+        $articles = Article::where('user_id', '=', $id)->get();
         $categories = Category::all();
         $data = [ 'articles' => $articles, 'categories' => $categories];
         return view('User.ManageArticle', compact('data' ));
@@ -118,9 +118,10 @@ class ArticleController extends Controller
     public function destroy($id)
     {
         $article = Article::find($id);
+        $userId = $article->user_id;
         $article->delete();
 
-        $articles = Article::all();
+        $articles = Article::where('user_id', '=', $userId)->get();
         $categories = Category::all();
         $data = ['articles' => $articles, 'categories' => $categories ];
 
