@@ -30,13 +30,18 @@
                             <td>{{$user->email}}</td>
                             <td>{{$user->phone}}</td>
                             <td>
+
                                 <form action="{{url('users/'.$user->id)}}" method="post">
                                     @method('DELETE')
                                     @csrf
                                     <button class="btn btn-danger" type="submit">
                                         Delete
                                     </button>
+                                    <a href="{{url('/articles/'.$user->id)}}" class="btn btn-warning link-color-light">
+                                        Manage User Article
+                                    </a>
                                 </form>
+
                             </td>
                         </tr>
                     @endforeach

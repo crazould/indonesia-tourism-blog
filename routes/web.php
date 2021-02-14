@@ -28,7 +28,7 @@ Route::put('/users/{id}', 'UserController@update');
 Route::delete('/users/{id}', 'UserController@destroy');
 
 Route::get('/article','ArticleController@create');
-Route::get('/articles','ArticleController@getAll');
+Route::get('/articles/{id}','ArticleController@getUserArticle');
 Route::get('/article/{id}','ArticleController@show');
 Route::post('/article','ArticleController@store');
 Route::delete('/article/{id}','ArticleController@destroy');
