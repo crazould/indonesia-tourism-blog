@@ -29,11 +29,14 @@ class AuthController extends Controller
             'password' => $request->password
         ]);
 
+        $categories = Category::all();
+        $data = ['categories' => $categories];
+
         if ($result) {
             return redirect()->to('/');
         }
 
-        return view('LoginPage')->with('error', 'invalid email and password combination');
+        return view('LoginPage', compact('data'))->with('error', 'invalid email and password combination');
 
     }
 
@@ -42,6 +45,9 @@ class AuthController extends Controller
         $this->validate($request, [
             'email' => "unique:users,email",
         ]);
+
+        $categories = Category::all();
+        $data = ['categories' => $categories];
 
         $user = new User();
         $user->name = $request->name;
@@ -52,7 +58,7 @@ class AuthController extends Controller
 
         $user->save();
 
-        return view('RegisterPage')->with('success', 'Sign Up Success!');
+        return view('RegisterPage', compact('data'))->with('success', 'Sign Up Success!');
     }
 
     public function logout(){
