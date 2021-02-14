@@ -14,11 +14,11 @@
 
     <div class="container" style="height: 800px;" >
 
-        <h1 class="display-3 mt-5 pt-5 mb-5"
+        <h1 class="display-3 mt-5 pt-5 "
             style="font-weight: bolder; text-align: left;">
             {{$data['article']->title}}
         </h1>
-
+        <hr class="mb-5">
         <p style="text-align: left">
             {{$data['article']->description}}
         </p>

@@ -1,5 +1,8 @@
 <?php
 
+use App\Article;
+use App\Category;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,4 +35,10 @@ Route::get('/articles/{id}','ArticleController@getUserArticle');
 Route::get('/article/{id}','ArticleController@show');
 Route::post('/article','ArticleController@store');
 Route::delete('/article/{id}','ArticleController@destroy');
+
+Route::get('/about-us',function (Request $request) {
+    $categories = Category::all();
+    $data = [ 'categories' => $categories];
+    return view('AboutUsPage', compact('data' ));
+});
 

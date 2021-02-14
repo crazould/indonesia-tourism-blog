@@ -192,7 +192,7 @@
                         </li>
                     @endisset
                     <li class="nav-item">
-                        <a class="nav-link link-color-light" href="#">About Us</a>
+                        <a class="nav-link link-color-light" href="/about-us">About Us</a>
                     </li>
                 @endif
 
