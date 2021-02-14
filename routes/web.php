@@ -27,7 +27,7 @@ Route::get('/logout', 'AuthController@logout');
 
 Route::get('/profile', 'UserController@edit')->middleware('auth-user');
 Route::get('/users/{role}', 'UserController@index')->middleware('auth-admin-role');
-Route::put('/users/{id}', 'UserController@update')->middleware('auth-admin-role');
+Route::put('/users/{id}', 'UserController@update')->middleware('auth-user-role');
 Route::delete('/users/{id}', 'UserController@destroy')->middleware('auth-admin-role');
 
 

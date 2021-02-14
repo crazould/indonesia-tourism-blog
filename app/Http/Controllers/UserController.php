@@ -80,7 +80,7 @@ class UserController extends Controller
 
         $user->save();
 
-        return view('User.ManageProfile')->with('success', 'Update Profile Success!');
+        return redirect()->back()->with('success', 'Update Profile Success!');
 
     }
 

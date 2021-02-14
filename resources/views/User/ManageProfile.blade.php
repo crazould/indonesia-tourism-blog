@@ -26,11 +26,11 @@
                 <input type="text" name="phone" class="form-control" placeholder="Enter your phone number here" value="{{\Illuminate\Support\Facades\Auth::user()->phone}}" required>
             </div>
             <button type="submit" class="btn btn-color-secondary btn-md my-4 text-color-light w-100">Update</button>
-            @isset($success)
+            @if (\Illuminate\Support\Facades\Session::has('success'))
                 <div class="alert alert-success">
-                    {{$success}}
+                    {{\Illuminate\Support\Facades\Session::get('success')}}
                 </div>
-            @endisset
+            @endif
         </form>
 
     </div>
