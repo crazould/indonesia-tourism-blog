@@ -20,18 +20,20 @@ Route::get('/','ArticleController@index');
 Route::get('/login','AuthController@showLoginPage');
 Route::get('/register','AuthController@showRegisterPage');
 Route::get('/category/{id}','CategoryController@show');
-Route::get('/profile', 'UserController@edit');
+
 
 Route::post('/login', 'AuthController@login');
 Route::post('/register', 'AuthController@register');
 Route::get('/logout', 'AuthController@logout');
 
+Route::get('/profile', 'UserController@edit')->middleware('auth-user');
 Route::get('/users/{role}', 'UserController@index');
 Route::put('/users/{id}', 'UserController@update');
 Route::delete('/users/{id}', 'UserController@destroy');
 
+
+Route::get('/articles/{id}','ArticleController@getUserArticle')->middleware('auth-user');
 Route::get('/article','ArticleController@create');
-Route::get('/articles/{id}','ArticleController@getUserArticle');
 Route::get('/article/{id}','ArticleController@show');
 Route::post('/article','ArticleController@store');
 Route::delete('/article/{id}','ArticleController@destroy');
