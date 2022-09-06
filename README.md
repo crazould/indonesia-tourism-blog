@@ -1,13 +1,9 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+## How to run the app
 
-![Mantap bang](https://tarheeltrailblazers.com/wp/wp-content/uploads/2020/08/computer-kid.jpeg "Mantap bang")
-
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+- run ```git clone https://github.com/crazould/indonesia-tourism-blog.git```
+- add ```.env``` file, you can copy the content from ```.env.example``` file
+- run ```composer update```
+- run ```php artisan serve```
 
 ## About Laravel
 
